@@ -1,0 +1,372 @@
+@font-face {
+    font-family: Poppins;
+    src: url(./font/Poppins-Medium.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins , sans-serif;
+}
+
+:root{
+    --text-color: #fff;
+    --bg-color : #1b1f24;
+    --second-bg-color:#22282f;
+    --main-color:#13bbff;
+    --other-color:#c3cad5;
+}
+html{
+        scroll-behavior: smooth;
+}
+body{
+    background-color: var(--bg-color);
+
+}
+::selection{
+    background-color: var(--main-color);
+    color: var(--bg-color);
+}
+header{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    background-color: var(--bg-color);
+    padding: 10px 10%;
+    z-index: 99;
+}
+
+header .logo{
+    font-size: 24px;
+    color: var(--text-color);
+}
+
+header .logo a{
+    text-decoration: none;
+}
+
+header .logo span{
+    color: var(--main-color);
+}
+
+header ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+header ul li a{
+    color: var(--text-color);
+    text-decoration: none;
+    margin-right: 20px;
+    transition: all 0.5s;
+}
+header ul li a:hover{
+    color: var(--main-color);
+    text-shadow: 0px 0px 6px var(--main-color);
+}
+header button{
+    background-color: var(--bg-color);
+    border: 2px solid var(--main-color);
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: var(--main-color);
+    cursor: pointer;
+    transition: all 0.5s;
+}
+button:hover{
+    box-shadow: 0px 0px 8px var(--main-color);
+    background-color: var(--main-color);
+    color: var(--text-color);
+}
+
+#home{
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color);
+    overflow: hidden;
+}
+.wrapper{
+    width: 70%;
+}
+#home p:last-child{
+    font-size: 10px;
+    animation: p;
+    animation-duration: 0.5s;
+    animation-delay: 0.5s;
+}
+#home h1{
+    font-size: 28px;
+    color: var(--main-color);
+    transition: all 1s;
+    animation: h1;
+    animation-duration: 0.5s;
+}
+@keyframes h1{
+    from{
+        transform: translateX(-500px);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+
+#home p{
+    margin-top: 10px;
+    animation: p;
+    animation-duration: 0.5s;
+}
+@keyframes p{
+    from{
+        transform: translateX(500px);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+.social-media-icons{
+    margin-top: 30px;
+    animation: icons;
+    animation-duration: 0.5s;
+}
+.social-media-icons i{
+    font-size: 22px;
+    margin-right: 10px;
+    color: var(--main-color);
+    transition: all 0.5s;
+}
+.social-media-icons i:hover{
+    text-shadow: 0px 0px 6px var(--main-color);
+    transform: translateY(-5px);
+}
+@keyframes icons{
+    from{
+        transform: translateY(100px);
+    }
+    to{
+        transform: translateY(0);
+    }
+}
+#about{
+    height: 100vh;
+    background-color: var(--second-bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 120px;
+}
+.img{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid var(--main-color);
+    box-shadow: 0px 0px 10px var(--main-color);
+    animation: image;
+    animation-duration: 0.5s;
+    overflow: hidden;
+}
+@keyframes image{
+    from{
+        transform: translateX(-500px);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+.img img{
+    width: 100%;
+    height: 100%;
+}
+.details{
+    color: var(--text-color);
+    overflow: hidden;
+    animation: detail;
+    animation-duration: 0.5s;
+}
+@keyframes detail{
+    from{
+        transform: translateX(200px);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+.details h1{
+    font-weight: 600;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.details h1 span{
+    color: var(--main-color);
+    font-size: inherit;
+}
+.details h3{
+    font-weight: 500;
+    font-size: medium;
+}
+.details span{
+    color: var(--other-color);
+    font-size: medium;
+}
+.details button{
+    margin-top: 20px;
+    background-color: var(--main-color);
+    border: 2px solid var(--main-color);
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: var(--bg-color);
+    cursor: pointer;
+    transition: all 0.5s;
+    font-weight: 600;
+}
+#services{
+    height: 100vh;
+}
+#services{
+    width: 100%;
+    background: var(--bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 100px;
+}
+
+.myservices{
+    width: 400px;
+    margin-left: 10%;
+    font-size: 28px;
+    color: #13bbff;
+    margin-bottom: 50px;
+}
+
+.service-list{
+    margin-left: 10%;
+    display: flex;
+    margin-top: 50px;
+    margin-right: 130px;
+    color: var(--text-color);
+}
+
+.service-list div{
+    margin-right: 30px;
+    background-color: var(--second-bg-color);
+    border-radius: 10px;
+    transition: 0.5s;
+    height: 260px;
+    border: 1px solid var(--main-color);
+}
+
+.service-list div *{
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.service-list div i{
+    font-size: 32px;
+}
+
+.service-list div h4{
+    font-size: 28px;
+}
+
+.service-list div p{
+    font-size: 12px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+.service-list div a{
+    font-size: 12px;
+    text-decoration: none;
+    margin-bottom: 20px;
+    color: var(--other-color);
+}
+
+.service-list img{
+    width: 40px;
+    color: #fff;
+}
+
+.service-list div:hover{
+    background-color: var(--main-color);
+    transform: translateY(-12px);
+    color: var(--bg-color);
+}
+#contact{
+    height: 100vh;
+    position: relative;
+    background-color: var(--second-bg-color);
+}
+.contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.contact form{
+    display: flex;
+    flex-direction: column;
+}
+.contact h1{
+    margin-top: 90px;
+    color: var(--text-color);
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+.contact h1 span{
+    color: var(--main-color);
+}
+.contact form input{
+    width: 500px;
+    padding: 10px 10px;
+    background-color: var(--second-bg-color);
+    border: 1px solid var(--main-color);
+    margin-bottom: 7px;
+    border-radius: 6px;
+    color: var(--text-color);
+}
+.contact form textarea{
+    background-color: var(--second-bg-color);
+    padding: 10px 10px;
+    background-color: var(--second-bg-color);
+    border: 1px solid var(--main-color);
+    margin-bottom: 7px;
+    border-radius: 4px;
+    color: var(--text-color);
+}
+.contact form textarea:focus{
+    outline: none;
+}
+.contact form input:focus{
+    outline: none;
+}
+.contact form button{
+    width: 130px;
+    padding: 10px 10px;
+    background-color: var(--main-color);
+    color: var(--bg-color);
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.footer{
+    background-color: var(--bg-color);
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: var(--text-color);
+    text-align: center;
+}
